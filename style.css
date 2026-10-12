@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+}
+
+.viewport {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 400ms ease;
+}
+
+.track img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.previous,
+.next {
+    position: absolute;
+    top: 45%;
+    padding: 12px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.previous {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.previous:hover,
+.next:hover {
+    background: #dbeafe;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.dots button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #94a3b8;
+    cursor: pointer;
+}
+
+.dots button.active {
+    background: #2563eb;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 24px auto;
+    }
+
+    .viewport {
+        aspect-ratio: 4 / 3;
+    }
+
+    .previous,
+    .next {
+        padding: 9px;
+    }
+}

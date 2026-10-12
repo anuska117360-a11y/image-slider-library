@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="slider.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <h1>Image Slider Library</h1>
+        <p>Use the arrows or dots to view the images.</p>
+
+        <div class="slider">
+            <div class="viewport">
+                <div class="track">
+                    <img src="https://picsum.photos/id/1018/900/500"
+                         alt="Mountain landscape">
+
+                    <img src="https://picsum.photos/id/1015/900/500"
+                         alt="River landscape">
+
+                    <img src="https://picsum.photos/id/1019/900/500"
+                         alt="Forest landscape">
+
+                    <img src="https://picsum.photos/id/1020/900/500"
+                         alt="Nature landscape">
+                </div>
+            </div>
+
+            <button class="previous" aria-label="Previous image">❮</button>
+            <button class="next" aria-label="Next image">❯</button>
+
+            <div class="dots"></div>
+        </div>
+    </main>
+
+</body>
+</html>
